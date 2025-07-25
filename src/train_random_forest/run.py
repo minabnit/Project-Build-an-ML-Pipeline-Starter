@@ -166,7 +166,8 @@ def get_inference_pipeline(rf_config, max_tfidf_features):
     # 2 - A OneHotEncoder() step to encode the variable
     non_ordinal_categorical_preproc = make_pipeline(
         SimpleImputer(strategy="most_frequent"),
-        OrdinalEncoder()
+        #OrdinalEncoder()
+        OneHotEncoder()
     )
     ######################################
 
